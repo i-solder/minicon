@@ -9,17 +9,17 @@ Connectors
 External on the station
 -----------------------
 
-![Station DIN connector 1](img/connector-din-station-1.svg)
-![Station DIN connector 2](img/connector-din-station-2.svg)
+![Station DIN connector 1](https://raw.githubusercontent.com/openersa/controller/master/doc/img/connector-din-station-1.svg)
+![Station DIN connector 2](https://raw.githubusercontent.com/openersa/controller/master/doc/img/connector-din-station-2.svg)
 
 Internal in station
 -------------------
 
-![Internal 8-pin connector](img/connector-stocko-8pin.svg)
+![Internal 8-pin connector](https://raw.githubusercontent.com/openersa/controller/master/doc/img/connector-stocko-8pin.svg)
 
-![Internal 6-pin connector](img/connector-stocko-6pin.svg)
+![Internal 6-pin connector](https://raw.githubusercontent.com/openersa/controller/master/doc/img/connector-stocko-6pin.svg)
 
 Connector on i-Tool
 -------------------
 
-![i-Tool DIN connector](img/connector-din-itool.svg)
+![i-Tool DIN connector](https://raw.githubusercontent.com/openersa/controller/master/doc/img/connector-din-itool.svg)
