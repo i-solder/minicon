@@ -22,4 +22,4 @@ Internal in station
 Connector on i-Tool
 -------------------
 
-![i-Tool DIN connector](img/connector-din-itool.svg)
+![i-Tool DIN connector](img/connector-din-itool.png)
