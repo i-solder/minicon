@@ -1,2 +1,8 @@
 library:
+  - atmel/atmega88
+  - diode/bas70-04
+  - nxp/74hc4050
   - resistor/r0805
+  - resistor/r2010
+  - ti/lm1086
+  - ti/opa335

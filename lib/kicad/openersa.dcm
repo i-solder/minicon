@@ -1,8 +1,54 @@
-EESchema-DOCLIB Version 2.0 Date: 07/09/2016 19:25:14
+EESchema-DOCLIB Version 2.0 Date: 08/09/2016 19:32:44
+#
+$CMP ATmega88-20AU
+D 8-bit AVR Microcontroller
+K IC, Digital, Microcontroller, MCU
+F http://www.atmel.com/Images/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_datasheet.pdf
+$ENDCMP
+#
+$CMP BAS70-04
+D Small Signal Schottky Diodes, Dual
+K Diode, Schottky
+$ENDCMP
+#
+$CMP 74HC4050D
+D Hex High-to-Low Level Shifter
+K IC, Digital, Buffer, Shifter
+F http://www.nxp.com/documents/data_sheet/74HC4050_CNV.pdf
+$ENDCMP
 #
 $CMP R0805
 D Chip resistor 2x1.25 mm
-K resistor, 1/8W
+K Resistor, 1/8W
+$ENDCMP
+#
+$CMP R2010
+D Chip resistor 4.9x2.4 mm
+K Resistor, 3/4W
+$ENDCMP
+#
+$CMP LM1086CS-2.5
+D 1.5-A Low Dropout Positive Regulator
+K IC, Analog, LDO, Regulator
+F http://www.ti.com/lit/ds/symlink/lm1086.pdf
+$ENDCMP
+#
+$CMP LM1086ILD-3.3
+D 1.5-A Low Dropout Positive Regulator
+K IC, Analog, LDO, Regulator
+F http://www.ti.com/lit/ds/symlink/lm1086.pdf
+$ENDCMP
+#
+$CMP OPA335AID
+D 0.05μV/°C max, Single-Supply CMOS Operational Amplifiers Zero-Drift Series
+K IC, Analog, OpAmp
+F http://www.ti.com/lit/ds/symlink/opa335.pdf
+$ENDCMP
+#
+$CMP OPA335AIDBV
+D 0.05μV/°C max, Single-Supply CMOS Operational Amplifiers Zero-Drift Series
+K IC, Analog, OpAmp
+F http://www.ti.com/lit/ds/symlink/opa335.pdf
 $ENDCMP
 #
 # End Doc Library
