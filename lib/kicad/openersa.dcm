@@ -1,4 +1,4 @@
-EESchema-DOCLIB Version 2.0 Date: 09/09/2016 13:20:40
+EESchema-DOCLIB Version 2.0 Date: 09/09/2016 17:47:14
 #
 $CMP ATmega128-16AU
 D 8-bit AVR Microcontroller
@@ -22,6 +22,17 @@ D Small Signal Schottky Diodes, Dual
 K Diode, Schottky
 $ENDCMP
 #
+$CMP D-MMA
+D MiniMelf Diode (MMA)
+K Diode
+$ENDCMP
+#
+$CMP NC7WZ07
+D TinyLogic UHS Dual Buffer (Open-Drain Outputs)
+K IC, Analog, Buffer
+F https://www.fairchildsemi.com/datasheets/NC/NC7WZ07.pdf
+$ENDCMP
+#
 $CMP TP-SM-1
 D Surface Mount Test Point, 1 mm diameter
 K Test point
@@ -31,6 +42,17 @@ $CMP 74HC4050D
 D Hex High-to-Low Level Shifter
 K IC, Digital, Buffer, Shifter
 F http://www.nxp.com/documents/data_sheet/74HC4050_CNV.pdf
+$ENDCMP
+#
+$CMP BAT54S
+D Schottky Barrier Diodes
+K Diode, Schottky
+$ENDCMP
+#
+$CMP BC857
+D PNP General Purpose Transistor
+K Transistor, PNP
+F http://www.nxp.com/documents/data_sheet/BC856_BC857_BC858.pdf
 $ENDCMP
 #
 $CMP R0805

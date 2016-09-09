@@ -5,8 +5,12 @@ library:
   - atmel/atmega88
   - capacitor/c0805
   - diode/bas70-04
+  - diode/d-mma
+  - fairchild/nc7wz07
   - misc/tp-sm-1
   - nxp/74hc4050
+  - nxp/bat54s
+  - nxp/bc857
   - resistor/r0805
   - resistor/r1206
   - resistor/r2010
