@@ -1,4 +1,4 @@
-EESchema-DOCLIB Version 2.0 Date: 09/09/2016 11:22:52
+EESchema-DOCLIB Version 2.0 Date: 09/09/2016 13:20:40
 #
 $CMP ATmega128-16AU
 D 8-bit AVR Microcontroller
@@ -38,9 +38,38 @@ D Chip resistor 2x1.25 mm
 K Resistor, 1/8W
 $ENDCMP
 #
+$CMP R1206
+D Chip resistor 3.1x1.55 mm
+K Resistor, 1/4W
+$ENDCMP
+#
 $CMP R2010
 D Chip resistor 4.9x2.4 mm
 K Resistor, 3/4W
+$ENDCMP
+#
+$CMP TST-110-01-D
+D .100" (2.54 mm) Shrouded Terminal Strip, Cable Mate, 7x2
+K Connector, Male
+F http://suddendocs.samtec.com/catalog_english/tst_th.pdf
+$ENDCMP
+#
+$CMP MKS1855-6-0-505
+D Pin connector with snap-in locking device for vertical connections
+K Connector
+F http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf
+$ENDCMP
+#
+$CMP MKS1856-6-0-606
+D Pin connector with snap-in locking device for vertical connections
+K Connector
+F http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf
+$ENDCMP
+#
+$CMP MKS1858-6-0-808
+D Pin connector with snap-in locking device for vertical connections
+K Connector
+F http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf
 $ENDCMP
 #
 $CMP LM1086CS-2.5
@@ -67,7 +96,15 @@ K IC, Analog, OpAmp
 F http://www.ti.com/lit/ds/symlink/opa335.pdf
 $ENDCMP
 #
+$CMP +10V
+D Power Symbol
+$ENDCMP
+#
 $CMP +24V
+D Power Symbol
+$ENDCMP
+#
+$CMP +24VAC
 D Power Symbol
 $ENDCMP
 #
