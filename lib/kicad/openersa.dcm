@@ -1,4 +1,10 @@
-EESchema-DOCLIB Version 2.0 Date: 08/09/2016 19:32:44
+EESchema-DOCLIB Version 2.0 Date: 09/09/2016 11:22:52
+#
+$CMP ATmega128-16AU
+D 8-bit AVR Microcontroller
+K IC, Digital, Microcontroller, MCU
+F http://www.atmel.com/Images/doc2467.pdf
+$ENDCMP
 #
 $CMP ATmega88-20AU
 D 8-bit AVR Microcontroller
@@ -6,9 +12,19 @@ K IC, Digital, Microcontroller, MCU
 F http://www.atmel.com/Images/Atmel-2545-8-bit-AVR-Microcontroller-ATmega48-88-168_datasheet.pdf
 $ENDCMP
 #
+$CMP C0805
+D Chip capacitor 2x1.25 mm
+K Capacitor
+$ENDCMP
+#
 $CMP BAS70-04
 D Small Signal Schottky Diodes, Dual
 K Diode, Schottky
+$ENDCMP
+#
+$CMP TP-SM-1
+D Surface Mount Test Point, 1 mm diameter
+K Test point
 $ENDCMP
 #
 $CMP 74HC4050D
@@ -49,6 +65,22 @@ $CMP OPA335AIDBV
 D 0.05μV/°C max, Single-Supply CMOS Operational Amplifiers Zero-Drift Series
 K IC, Analog, OpAmp
 F http://www.ti.com/lit/ds/symlink/opa335.pdf
+$ENDCMP
+#
+$CMP +24V
+D Power Symbol
+$ENDCMP
+#
+$CMP +3V3
+D Power Symbol
+$ENDCMP
+#
+$CMP +5V
+D Power Symbol
+$ENDCMP
+#
+$CMP GND
+D Signal Ground Symbol
 $ENDCMP
 #
 # End Doc Library
