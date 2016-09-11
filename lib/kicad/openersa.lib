@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3 Date: 09/09/2016 17:47:14
+EESchema-LIBRARY Version 2.3 Date: 11/09/2016 08:39:35
 #encoding utf-8
 #
 # ATmega128-16AU
@@ -691,7 +691,7 @@ F2 "" 0 0 0 H I C CNN
 DRAW
 X GND 1 0 0 0 D 50 50 1 1 W N
 P 2 1 1 0 0 0 0 -50 N
-P 4 1 1 12 -50 -50 50 -50 0 -100 -50 -50 N
+P 4 1 1 12 -50 -50 50 -50 0 -100 -50 -50 f
 ENDDRAW
 ENDDEF
 # End Library
