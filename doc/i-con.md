@@ -9,7 +9,12 @@ Connectors
 External on the station
 -----------------------
 
+Left side (accepts i-Tool, Power-Tool, Tech-tool, Micro-Tool, Chip-Tool, X-Tool):
+
 ![Station DIN connector 1](img/connector-din-station-1.png)
+
+Right side (accepts i-Tool only):
+
 ![Station DIN connector 2](img/connector-din-station-2.png)
 
 Internal in station
@@ -23,3 +28,8 @@ Connector on i-Tool
 -------------------
 
 ![i-Tool DIN connector](img/connector-din-itool.png)
+
+Connector on ChipTool
+-------------------
+
+![i-Tool DIN connector](img/connector-din-chiptool.png)
