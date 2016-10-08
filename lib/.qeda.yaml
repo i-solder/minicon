@@ -1,5 +1,6 @@
 ground:
   - signal/GND
+  - earth/PE
 library:
   - atmel/atmega128
   - atmel/atmega88
@@ -20,6 +21,9 @@ library:
   - stocko/mks1858
   - ti/lm1086
   - ti/opa335
+  - toshiba/tlp160g
+  - toshiba/tc7s14f
+  - misc/tp-th-1
 power:
   - +10V
   - +24V

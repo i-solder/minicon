@@ -1,4 +1,4 @@
-EESchema-DOCLIB Version 2.0 Date: 11/09/2016 08:39:35
+EESchema-DOCLIB Version 2.0 Date: 08/10/2016 04:29:38
 #
 $CMP ATmega128-16AU
 D 8-bit AVR Microcontroller
@@ -118,6 +118,23 @@ K IC, Analog, OpAmp
 F http://www.ti.com/lit/ds/symlink/opa335.pdf
 $ENDCMP
 #
+$CMP TLP160G
+D Photocoupler, Phototriac Output
+K IC, Analog, Optocoupler
+F https://toshiba.semicon-storage.com/info/docget.jsp?did=16916&prodName=TLP160G
+$ENDCMP
+#
+$CMP TC7S14F
+D Single Schmitt Inverter
+K IC, Digital, Inverter
+F https://toshiba.semicon-storage.com/info/docget.jsp?did=20193&prodName=TC7S14F
+$ENDCMP
+#
+$CMP TP-TH-1
+D Through-hole Test Point, 1 mm diameter hole
+K Test point
+$ENDCMP
+#
 $CMP +10V
 D Power Symbol
 $ENDCMP
@@ -140,6 +157,10 @@ $ENDCMP
 #
 $CMP GND
 D Signal Ground Symbol
+$ENDCMP
+#
+$CMP PE
+D Earth Ground Symbol
 $ENDCMP
 #
 # End Doc Library
