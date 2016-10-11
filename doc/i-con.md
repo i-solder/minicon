@@ -33,3 +33,37 @@ Connector on ChipTool
 -------------------
 
 ![i-Tool DIN connector](img/connector-din-chiptool.png)
+
+Communication
+=============
+
+To communicate with i-Tool, station uses `DATA` wire which combines both power and data. Furthermore data is half-duplex.
+
+Station uses UART protocol:
+
+- 230400 bps
+- One start bit
+- No parity bit
+- One stop bit
+
+Every 20 ms (50 Hz) station transmits following sequence:
+
+    0x02 0x2F 0x05 0x10 0x00 0x05 0x8E 0x49
+
+Transmit message format seems to be:
+
+| Preamble | Command | Data           | Checksum |
+|----------|---------|----------------|----------|
+| 2 bytes  | 1 byte  | n bytes        | 2 bytes  |
+| 0x2F02   | 0x05    | 0x10 0x00 0x05 | 0x498E   |
+
+After approx 120 μs iTool starts to reply with status and temperature information. For example:
+
+    0x02 0x2F 0x0A 0x10 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x03 0x00 0xAF 0xDE
+
+Receive message format seems to be:
+
+| Preamble | Status | Command Data   | Status data                                       | Checksum |
+|----------|--------|----------------|---------------------------------------------------|----------|
+| 2 bytes  | 1 byte | n bytes        | m bytes                                           | 2 bytes  |
+| 0x2F02   | 0x0A   | 0x10 0x00 0x05 | 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x03 0x00 | 0xDEAF   |
