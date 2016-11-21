@@ -41,7 +41,7 @@ To communicate with i-Tool, station uses `DATA` wire which combines both power a
 
 Station uses UART protocol:
 
-- 230400 bps
+- 250000 bps
 - One start bit
 - No parity bit
 - One stop bit
@@ -52,10 +52,10 @@ Every 20 ms (50 Hz) station transmits following sequence:
 
 Transmit message format seems to be:
 
-| Preamble | Command | Data           | Checksum |
-|----------|---------|----------------|----------|
-| 2 bytes  | 1 byte  | n bytes        | 2 bytes  |
-| 0x2F02   | 0x05    | 0x10 0x00 0x05 | 0x498E   |
+| Preamble | Request | Command | Padding | Response Length | Checksum |
+|----------|---------|---------| --------|-----------------|----------|
+| 2 bytes  | 1 byte  | 1 byte  | 1 byte  | 1 byte          | 2 bytes  |
+| 0x2F02   | 0x05    | 0x10    | 0x00    | 0x05            | 0x498E   |
 
 After approx 120 μs iTool starts to reply with status and temperature information. For example:
 
@@ -63,7 +63,7 @@ After approx 120 μs iTool starts to reply with status and temperature informati
 
 Receive message format seems to be:
 
-| Preamble | Status | Command Data   | Status data                                            | Checksum |
-|----------|--------|----------------|--------------------------------------------------------|----------|
-| 2 bytes  | 1 byte | n bytes        | m bytes                                                | 2 bytes  |
-| 0x2F02   | 0x0A   | 0x10 0x00 0x05 | 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 | 0xDEAF   |
+| Preamble | Response | Command Data   | Status data                                            | Checksum |
+|----------|----------|----------------|--------------------------------------------------------|----------|
+| 2 bytes  | 1 byte   | n bytes        | m bytes                                                | 2 bytes  |
+| 0x2F02   | 0x0A     | 0x10 0x00 0x05 | 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 | 0xDEAF   |
