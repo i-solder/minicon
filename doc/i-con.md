@@ -6,6 +6,13 @@ Here we will examine interior of original [Ersa i-СON 2](http://www.kurtzersa.c
 Connectors
 ==========
 
+Legend:
+
+- **DATA** &mdash; data line (one-wire UART, see "Communication" below)
+- **PE** &mdash; protective earth
+- **HE+** &mdash; heating element positive circuit
+- **HE&minus;** &mdash; heating element negative circuit
+
 External on the station
 -----------------------
 
@@ -24,13 +31,13 @@ Internal in station
 
 ![Internal 6-pin connector](img/connector-stocko-6pin.png)
 
-Connector on i-Tool
--------------------
+Connector on i-Tool (_mirrored_)
+--------------------------------
 
 ![i-Tool DIN connector](img/connector-din-itool.png)
 
-Connector on ChipTool
--------------------
+Connector on ChipTool (_mirrored_)
+----------------------------------
 
 ![i-Tool DIN connector](img/connector-din-chiptool.png)
 
@@ -46,24 +53,94 @@ Station uses UART protocol:
 - No parity bit
 - One stop bit
 
-Every 20 ms (50 Hz) station transmits following sequence:
+Endian is little.
 
-    0x02 0x2F 0x05 0x10 0x00 0x05 0x8E 0x49
+Data exchange
+-------------
 
-Transmit message format seems to be:
+Every request from station is followed by tool response after ca. 120 μs.
 
-| Preamble | Request | Command | Padding | Response Length | Checksum |
-|----------|---------|---------| --------|-----------------|----------|
-| 2 bytes  | 1 byte  | 1 byte  | 1 byte  | 1 byte          | 2 bytes  |
-| 0x2F02   | 0x05    | 0x10    | 0x00    | 0x05            | 0x498E   |
+Request format
+--------------
 
-After approx 120 μs iTool starts to reply with status and temperature information. For example:
+| Offset | Type  | Example | Description                                       |
+|--------|-------|---------|---------------------------------------------------|
+| 0      | u16   | 0x2F02  | Preamble (constant)                               |
+| 2      | u8    | 0x05    | Message ID (0x05 for request)                     |
+| 3      | u16   | 0x0010  | Operation code                                    |
+| 5      | u8    | 0x05    | Requested data length                             |
+| 6      | u16   | 0x498E  | Checksum                                          |
 
-    0x02 0x2F 0x0A 0x10 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 0xAF 0xDE
+Response format
+---------------
 
-Receive message format seems to be:
+| Offset | Type  | Example | Description                                       |
+|--------|-------|---------|---------------------------------------------------|
+| 0      | u16   | 0x2F02  | Preamble (constant)                               |
+| 2      | u8    | 0x0A    | Message ID                                        |
+| 3      | u16   | 0x0010  | Request operation code                            |
+| 5      | u8    | 0x05    | Requested data length                             |
+| 6      | array | 0x5E 0x0A 0x1C 0x03 0x00 | Data                             |
+| n-2    | u16   | 0x8F42  | Checksum                                          |
 
-| Preamble | Response | Command Data   | Status data                                            | Checksum |
-|----------|----------|----------------|--------------------------------------------------------|----------|
-| 2 bytes  | 1 byte   | n bytes        | m bytes                                                | 2 bytes  |
-| 0x2F02   | 0x0A     | 0x10 0x00 0x05 | 0xC1 0x04 0x20 0x03 0x00 0x05 0xC1 0x04 0x20 0x03 0x00 | 0xDEAF   |
+Messages
+========
+
+Get tool ID
+-----------
+
+This data exchange is implemented once during startup.
+
+Request:
+
+- Message ID: **0x05**
+- Operation code: **0x0001**
+- Requested data length: **2**
+
+Response:
+
+- Message ID: **0x07**
+- Data:
+  * **0x2802**: i-Tool
+
+Get tool revision
+-----------------
+
+This data exchange is implemented once during startup.
+
+Request:
+
+- Message ID: **0x05**
+- Operation code: **0x0040**
+- Requested data length: **2**
+
+Response:
+
+- Message ID: **0x07**
+- Data:
+  * [0]: (u8) Minor
+  * [1]: (u8) Major
+
+Get status
+----------
+
+This data exchange is implemented every 20 ms (50 Hz).
+
+Request:
+
+- Message ID: **0x05**
+- Operation code: **0x0010**
+- Requested data length: **5**
+
+Response:
+
+- Message ID: **0x0A**
+- Data:
+  * [0]: (u16) Temperature (Celsius * 10)
+  * [2]: (u8) Counter
+  * [3]: (u16) Flags
+
+Checksum
+========
+
+_To be defined_

@@ -2,6 +2,7 @@
 
 import getopt
 import fileinput
+import struct
 import sys
 
 # Usage
@@ -23,6 +24,11 @@ def print_packet(packet):
         print("REQ:" + msg)
     else:
         print("RES:" + msg)
+        #if packet[2] == 0x0A:
+        #    ba = bytearray(packet[6:8])
+        #    (temperature,) = struct.unpack("<H", ba)
+        #    print(str(temperature) + "," + str(packet[8]) + "," + str(packet[9]) + "," + str(packet[10]))
+
 
 # Main
 def main():
