@@ -46,19 +46,19 @@ Communication
 
 To communicate with i-Tool, station uses `DATA` wire which combines both power and data. Furthermore data is half-duplex.
 
-Station uses UART protocol:
+UART protocol is used:
 
 - 250000 bps
 - One start bit
 - No parity bit
 - One stop bit
 
-Endian is little.
-
 Data exchange
 -------------
 
 Every request from station is followed by tool response after ca. 120 μs.
+
+Endian is little.
 
 Request format
 --------------
@@ -66,7 +66,7 @@ Request format
 | Offset | Type  | Example | Description                                       |
 |--------|-------|---------|---------------------------------------------------|
 | 0      | u16   | 0x2F02  | Preamble (constant)                               |
-| 2      | u8    | 0x05    | Message ID (0x05 for request)                     |
+| 2      | u8    | 0x05    | Message ID                                        |
 | 3      | u16   | 0x0010  | Operation code                                    |
 | 5      | u8    | 0x05    | Requested data length                             |
 | 6      | u16   | 0x498E  | Checksum                                          |
@@ -143,4 +143,9 @@ Response:
 Checksum
 ========
 
-_To be defined_
+- Algorithm: **CRC-CCITT (XModem)**
+- Data: Overall message (including preamble)
+
+Example:
+
+    CRC-CCITT-XModem(0x02 0x2F 0x05 0x10 0x00 0x05) = 0x498E
