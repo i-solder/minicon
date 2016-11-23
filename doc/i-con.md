@@ -103,6 +103,11 @@ Response:
 - Data:
   * **0x2802**: i-Tool
 
+Example:
+
+- Request (hex): `02 2F 05 01 00 02 3A 4D`
+- Response (hex): `02 2F 07 01 00 02 02 28 C1 A4`
+
 Get tool revision
 -----------------
 
@@ -120,6 +125,11 @@ Response:
 - Data:
   * [0]: (u8) Minor
   * [1]: (u8) Major
+
+Example:
+
+- Request (hex): `02 2F 05 40 00 02 A7 67`
+- Response (hex): `02 2F 07 40 00 02 00 01 D1 CC`
 
 Get status
 ----------
@@ -139,6 +149,11 @@ Response:
   * [0]: (u16) Temperature (Celsius * 10)
   * [2]: (u8) Counter
   * [3]: (u16) Flags
+
+Example:
+
+- Request (hex): `02 2F 05 10 00 05 8E 49`
+- Response (hex): `02 2F 0A 10 00 05 52 0A 1C 03 00 69 04`
 
 Checksum
 ========
