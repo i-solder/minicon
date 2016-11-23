@@ -159,7 +159,7 @@ Checksum
 ========
 
 - Algorithm: **CRC-CCITT (XModem)**
-- Data: Overall message (including preamble)
+- Data: **entire message**, including preamble, except CRC itself
 
 Example:
 
