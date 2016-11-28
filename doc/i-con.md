@@ -146,14 +146,27 @@ Response:
 
 - Message ID: **0x0A**
 - Data:
-  * [0]: (u16) Temperature (Celsius * 10)
-  * [2]: (u8) Counter
-  * [3]: (u16) Flags
+  * [0]: (u16) Heating element temperature (Celsius * 10)
+  * [2]: (u8) Ambient temperature (Celsius)
+  * [3]: (u16) Flags (see below)
+
+Flags:
+
+| 15 ... 2 |    1 |  0 |
+|----------|------|----|
+| RESERVED | IDLE | OK |
+
+- `RESERVED`: Reserved for future use
+- `IDLE`: Set when tool is not moved
+- `OK`: No error state
 
 Example:
 
 - Request (hex): `02 2F 05 10 00 05 8E 49`
 - Response (hex): `02 2F 0A 10 00 05 52 0A 1C 03 00 69 04`
+  * Heating element temperature: 0x0A52 = **264.2 &deg;C**
+  * Ambient temperature: 0x1C = **28&deg;C**
+  * Flags: 0x0003 = **IDLE | OK**
 
 Checksum
 ========
