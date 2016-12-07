@@ -31,8 +31,8 @@ Internal in station
 
 ![Internal 6-pin connector](img/connector-stocko-6pin.png)
 
-Connector on i-Tool (_mirrored_)
---------------------------------
+Connector on i-Tool
+-------------------
 
 ![i-Tool DIN connector](img/connector-din-itool.png)
 
