@@ -24,6 +24,8 @@ library:
   - toshiba/tlp160g
   - toshiba/tc7s14f
   - misc/tp-th-1
+  - connector/din-8p
+  - module/brd-stm32f103
 power:
   - +10V
   - +24V

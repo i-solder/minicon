@@ -1,4 +1,4 @@
-EESchema-DOCLIB Version 2.0 Date: 08/10/2016 04:29:38
+EESchema-DOCLIB  Version 2.0 Date: 05/01/2017 00:39:41
 #
 $CMP ATmega128-16AU
 D 8-bit AVR Microcontroller
@@ -133,6 +133,16 @@ $ENDCMP
 $CMP TP-TH-1
 D Through-hole Test Point, 1 mm diameter hole
 K Test point
+$ENDCMP
+#
+$CMP DIN-8P
+D 8-Pin Circular DIN Female Connector
+K Connector, Female
+$ENDCMP
+#
+$CMP BRD-STM32F103
+D STM32F103C8T6 Minimum System Development Board Module
+K Module, CPU
 $ENDCMP
 #
 $CMP +10V

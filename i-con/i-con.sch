@@ -172,17 +172,6 @@ Text Label 13050 7050 0    50   ~ 0
 Entry Wire Line
 	12900 6950 13000 7050
 $Comp
-L MKS1855-6-0-505 J?
-U 1 1 57D2845B
-P 1600 3600
-F 0 "J?" H 1700 3630 50  0000 C BNN
-F 1 "MKS1855-6-0-505" H 1700 2970 50  0000 C TNN
-F 2 "openersa:STOCKO_MKS1855-6-0-505" H 1600 3600 50  0001 C CNN
-F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1600 3600 50  0001 C CNN
-	1    1600 3600
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR?
 U 1 1 57D28541
 P 2100 3700
@@ -205,28 +194,6 @@ F 3 "" H 2100 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 1900 3900
-$Comp
-L MKS1856-6-0-606 J?
-U 1 1 57D28E5E
-P 1600 2650
-F 0 "J?" H 1700 2680 50  0000 C BNN
-F 1 "MKS1856-6-0-606" H 1700 1920 50  0000 C TNN
-F 2 "openersa:STOCKO_MKS1856-6-0-606" H 1600 2650 50  0001 C CNN
-F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1600 2650 50  0001 C CNN
-	1    1600 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L MKS1858-6-0-808 J?
-U 1 1 57D28ED3
-P 1600 1300
-F 0 "J?" H 1700 1330 50  0000 C BNN
-F 1 "MKS1858-6-0-808" H 1700 370 50  0000 C TNN
-F 2 "openersa:STOCKO_MKS1858-6-0-808" H 1600 1300 50  0001 C CNN
-F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1600 1300 50  0001 C CNN
-	1    1600 1300
-	1    0    0    -1  
-$EndComp
 $Comp
 L ATmega88-20AU U?
 U 1 1 57D2957F
@@ -504,12 +471,12 @@ $EndComp
 $Comp
 L GND #PWR?
 U 1 1 57D352AC
-P 5400 16350
-F 0 "#PWR?" H 5400 16380 50  0001 C BNN
-F 1 "GND" H 5400 16220 50  0000 C TNN
-F 2 "" H 5400 16350 50  0001 C CNN
-F 3 "" H 5400 16350 50  0001 C CNN
-	1    5400 16350
+P 5600 16350
+F 0 "#PWR?" H 5600 16380 50  0001 C BNN
+F 1 "GND" H 5600 16220 50  0000 C TNN
+F 2 "" H 5600 16350 50  0001 C CNN
+F 3 "" H 5600 16350 50  0001 C CNN
+	1    5600 16350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -957,7 +924,7 @@ Entry Wire Line
 Entry Wire Line
 	2850 2000 2950 2100
 Text Label 2800 2000 2    50   ~ 0
-DATA1
+P/IO
 Text Label 3100 15850 0    50   ~ 0
 RED1
 Entry Wire Line
@@ -1714,21 +1681,21 @@ F 3 "" H 3850 12900 50  0001 C CNN
 	1    3850 12900
 	1    0    0    -1  
 $EndComp
-Text Notes 1550 1600 2    50   ~ 0
+Text Notes 1450 1600 2    50   ~ 0
 iTool (white)
-Text Notes 1550 1800 2    50   ~ 0
+Text Notes 1450 1800 2    50   ~ 0
 non-iTool (magenta)
-Text Notes 1550 1900 2    50   ~ 0
+Text Notes 1450 1900 2    50   ~ 0
 non-iTool (brown)
-Text Notes 1550 2000 2    50   ~ 0
+Text Notes 1450 2000 2    50   ~ 0
 both (red)
-Text Notes 1550 2100 2    50   ~ 0
+Text Notes 1450 2100 2    50   ~ 0
 both (blue)
-Text Notes 1550 1700 2    50   ~ 0
+Text Notes 1450 1700 2    50   ~ 0
 both (yellow)
-Text Notes 1550 1500 2    50   ~ 0
+Text Notes 1450 1500 2    50   ~ 0
 nc (green)
-Text Notes 1550 1400 2    50   ~ 0
+Text Notes 1450 1400 2    50   ~ 0
 both (black)
 $Comp
 L PE #PWR?
@@ -1877,8 +1844,8 @@ F 3 "" H 19350 5900 50  0001 C CNN
 	1    19350 5900
 	1    0    0    -1  
 $EndComp
-Text Label 21050 5900 2    50   ~ 0
-DATA1
+Text Label 21100 5900 2    50   ~ 0
+P/IO
 $Comp
 L BAT54S D?
 U 1 1 57FF3F5E
@@ -2066,19 +2033,19 @@ F 3 "" H 20050 8300 50  0001 C CNN
 	1    20050 8300
 	1    0    0    -1  
 $EndComp
-Text Notes 1550 3150 2    50   ~ 0
+Text Notes 1450 3150 2    50   ~ 0
 iTool (white)
-Text Notes 1550 3050 2    50   ~ 0
+Text Notes 1450 3050 2    50   ~ 0
 both (yellow)
 Text Label 2800 3250 2    50   ~ 0
 HE2_N
-Text Notes 1550 2850 2    50   ~ 0
+Text Notes 1450 2850 2    50   ~ 0
 both (red)
-Text Notes 1550 2750 2    50   ~ 0
+Text Notes 1450 2750 2    50   ~ 0
 both (black)
-Text Notes 1550 2950 2    50   ~ 0
+Text Notes 1450 2950 2    50   ~ 0
 non-iTool (magenta)
-Text Notes 1550 3250 2    50   ~ 0
+Text Notes 1450 3250 2    50   ~ 0
 both (blue)
 Entry Wire Line
 	2950 2400 3050 2500
@@ -2287,7 +2254,7 @@ Wire Wire Line
 	23650 5550 23650 5450
 Connection ~ 23650 5450
 Wire Wire Line
-	5300 16350 5400 16350
+	5500 16350 5600 16350
 Wire Wire Line
 	4800 16450 4700 16450
 Wire Wire Line
@@ -2743,4 +2710,43 @@ Wire Wire Line
 Wire Wire Line
 	18000 13950 18000 13850
 Connection ~ 18000 13850
+$Comp
+L MKS1858-6-0-808 J?
+U 1 1 583AAE9E
+P 1500 1300
+F 0 "J?" H 1550 1330 50  0000 C BNN
+F 1 "MKS1858-6-0-808" H 1550 370 50  0000 C TNN
+F 2 "openersa:STOCKO_MKS1858-6-0-808" H 1500 1300 50  0001 C CNN
+F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1500 1300 50  0001 C CNN
+	1    1500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MKS1856-6-0-606 J?
+U 1 1 583AB79A
+P 1500 2650
+F 0 "J?" H 1550 2680 50  0000 C BNN
+F 1 "MKS1856-6-0-606" H 1550 1920 50  0000 C TNN
+F 2 "openersa:STOCKO_MKS1856-6-0-606" H 1500 2650 50  0001 C CNN
+F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1500 2650 50  0001 C CNN
+	1    1500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MKS1855-6-0-505 J?
+U 1 1 583ABC8A
+P 1500 3600
+F 0 "J?" H 1550 3630 50  0000 C BNN
+F 1 "MKS1855-6-0-505" H 1550 2970 50  0000 C TNN
+F 2 "openersa:STOCKO_MKS1855-6-0-505" H 1500 3600 50  0001 C CNN
+F 3 "http://www.stocko-contact.com/catalog-pdf/steckverbindersystem-raster-2,5-mm.pdf" H 1500 3600 50  0001 C CNN
+	1    1500 3600
+	1    0    0    -1  
+$EndComp
+Text Label 17800 5800 2    50   ~ 0
+RX
+Text Label 17800 5900 2    50   ~ 0
+TX
+Text Label 17800 6000 2    50   ~ 0
+PWR_CTL
 $EndSCHEMATC
