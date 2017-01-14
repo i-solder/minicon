@@ -26,6 +26,13 @@ library:
   - misc/tp-th-1
   - connector/din-8p
   - module/brd-stm32f103
+  - module/sparkfun-pro-micro
+  - ti/lm2596
+  - module/oled-ssd1306
+  - capacitor/c1210
+  - capacitor/c1206
+  - capacitor/cp-d
+  - molex/39-28-1043
 power:
   - +10V
   - +24V
