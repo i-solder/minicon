@@ -33,6 +33,8 @@ library:
   - capacitor/c1206
   - capacitor/cp-d
   - molex/39-28-1043
+  - resistor/r0603
+  - capacitor/c0603
 power:
   - +10V
   - +24V

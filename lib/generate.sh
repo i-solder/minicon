@@ -1,3 +1,3 @@
 #!/bin/bash
 
-qeda generate openersa
+qeda generate minicon

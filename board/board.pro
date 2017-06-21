@@ -14,4 +14,4 @@ LabSize=50
 version=1
 LibDir=../lib
 [eeschema/libraries]
-LibName1=../lib/kicad/openersa
+LibName1=../lib/kicad/minicon
